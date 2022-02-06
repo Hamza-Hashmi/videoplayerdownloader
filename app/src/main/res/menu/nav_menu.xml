@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Home"
+        android:id="@+id/nav_home"
+        android:iconTint="@color/colorPrimary"
+        android:icon="@drawable/ic_home_nav"/>
+
+     <item android:title="Video Downloader"
+         android:iconTint="@color/colorPrimary"
+         android:id="@+id/nav_videoDownloader"
+         android:icon="@drawable/ic_sites_nav"/>
+    <item android:title="Trending Videos"
+        android:id="@+id/nav_trendingVideos"
+        android:icon="@drawable/ic_trending_nav"/>
+    <item android:title="Audio Songs"
+        android:id="@+id/nav_audioSongs"
+        android:icon="@drawable/ic_music_nav"/>
+
+    <item android:title="Downloads"
+        android:id="@+id/nav_downlaods"
+        android:icon="@drawable/ic_download_nav"/>
+
+    <group android:id="@+id/g1">
+
+        <item android:title="Share"
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_share_app_nav"/>
+        <item android:title="Rate Us"
+            android:id="@+id/nav_rateus"
+            android:icon="@drawable/ic_rate_app_nav"/>
+        <item android:title="Privacy Policy"
+            android:id="@+id/nav_privacyPolicy"
+            android:icon="@drawable/ic_privacy_policy_nav"/>
+
+    </group>
+
+
+</menu>

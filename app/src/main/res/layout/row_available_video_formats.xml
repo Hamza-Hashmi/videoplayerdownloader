@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:id="@+id/avaialabe_item"
+    android:layout_height="81dp"
+    android:layout_margin="@dimen/_8sdp">
+
+    <TextView
+        android:id="@+id/videoQualtiy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="SD Video"
+        android:textColor="@color/pinkColor"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppins_medium" />
+    <TextView
+        android:id="@+id/videoSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Size: 2MB"
+        android:textColor="@color/pinkColor"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="10sp"
+        />
+</LinearLayout>

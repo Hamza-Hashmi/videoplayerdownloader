@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/_10sdp"
+    android:paddingTop="@dimen/_20sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:maxLines="2"
+        android:text="What whould you like to do with this video?"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btnCancel"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_cross"
+        android:id="@+id/btnCancel"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:id="@+id/detailLayout"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv">
+
+
+        <ImageView
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_8sdp"
+            android:id="@+id/imageView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/download"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/imageView"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:text="video name"
+            app:layout_constraintRight_toRightOf="parent"
+            android:maxLines="3"
+            android:id="@+id/videoNameTv"
+            app:layout_constraintTop_toTopOf="@id/imageView"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@id/imageView"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvVideosAvailable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="@dimen/_70sdp"
+        android:visibility="visible"
+        android:minHeight="@dimen/_10sdp"
+        tools:listitem="@layout/row_available_video_formats"
+        app:layout_constraintTop_toBottomOf="@id/detailLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_6sdp"
+
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_download_nav"
+        android:paddingLeft="@dimen/_30sdp"
+        android:backgroundTint="@color/pinkColor"
+        android:text="Download"
+        android:id="@+id/btnDownload"
+        app:layout_constraintTop_toBottomOf="@id/rvVideosAvailable"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

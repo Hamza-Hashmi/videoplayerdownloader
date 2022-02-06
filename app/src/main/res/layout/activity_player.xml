@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    >
+
+
+    <com.example.videoplayer_and_downloader.videoPlayerHelper.dtpv.DoubleTapPlayerView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:animation_enabled="false"
+        app:dtpv_controller="@id/youtube_overlay"
+
+        app:show_shuffle_button="true"
+        app:show_subtitle_button="true" />
+
+    <FrameLayout
+        android:id="@+id/holder_ad"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@color/white">
+
+        <include layout="@layout/ad_loader_player" />
+    </FrameLayout>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

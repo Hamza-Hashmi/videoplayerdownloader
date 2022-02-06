@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.VideoInProgressFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        app:backgroundTint="@color/video_download_fragment_main_color"
+        android:background="@color/video_download_fragment_main_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/toolbar">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBack"
+            android:src="@drawable/ic_back_black"
+            android:padding="@dimen/_12sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/playicon"
+            app:layout_constraintLeft_toLeftOf="@id/tvPlay"
+            app:layout_constraintRight_toRightOf="@id/tvPlay"
+            app:layout_constraintTop_toTopOf="@id/tvPlay"
+            android:layout_marginBottom="@dimen/_14sdp"
+            android:layout_marginRight="@dimen/_1sdp"
+            app:layout_constraintBottom_toBottomOf="@id/tvPlay"/>
+
+        <TextView
+            android:id="@+id/tvPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="PLAY"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/primary_color"
+            app:layout_constraintBottom_toBottomOf="@id/btnBack"
+            app:layout_constraintLeft_toRightOf="@id/btnBack"
+            app:layout_constraintTop_toTopOf="@id/btnBack" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDownload"
+            android:fontFamily="@font/roboto_bold"
+            android:text="&amp; Downoload"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintLeft_toRightOf="@id/tvPlay"
+            app:layout_constraintTop_toTopOf="@id/tvPlay"
+            app:layout_constraintBottom_toBottomOf="@id/tvPlay"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/no_progress_video_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/novideodownload"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No Progress History"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="@dimen/_15sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Empty Video Download Progress Screen"
+            android:textColor="#878686"
+            android:fontFamily="@font/roboto"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/_10sdp"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/videoInProgressRecyclerView"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/_12sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

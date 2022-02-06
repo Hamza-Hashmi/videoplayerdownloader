@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.nativead.NativeAdView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.gms.ads.nativead.MediaView
+            android:id="@+id/ad_media"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_min="@dimen/_110sdp"
+            app:layout_constraintHeight_max="@dimen/_160sdp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            android:layout_marginBottom="@dimen/_6sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ad_media"
+            >
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:padding="@dimen/_2sdp"
+                android:id="@+id/ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <ImageView
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:id="@+id/ad_app_icon"
+                    android:layout_width="@dimen/_37sdp"
+                    android:layout_height="@dimen/_37sdp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/break_image"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:layout_constraintTop_toTopOf="@+id/ll"
+                android:id="@+id/ad_headline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="#191919"
+                android:lineSpacingExtra="1sp"
+                android:text="@string/audio_sharing"
+                app:layout_constraintEnd_toStartOf="@+id/adLabel"
+                app:layout_constraintStart_toEndOf="@+id/ll"
+                android:layout_marginStart="@dimen/_12sdp"
+                />
+            <TextView
+                android:id="@+id/ad_body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:fontFamily="@font/poppins"
+                android:textStyle="normal"
+                android:textSize="@dimen/_9ssp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:textColor="#aaaaaa"
+                android:lineSpacingExtra="4sp"
+                android:text="@string/type_"
+                android:visibility="visible"
+
+                app:layout_constraintStart_toEndOf="@+id/ll"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:layout_constraintEnd_toStartOf="@+id/adLabel"
+                app:layout_constraintTop_toBottomOf="@+id/ad_headline"
+                />
+
+            <TextView
+                android:layout_marginTop="@dimen/_2sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:id="@+id/adLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/square_border_shape"
+                android:contentDescription="@string/break_image"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:text="@string/ad"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_5ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+              />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/end_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll">
+
+                <!--                <com.google.android.material.button.MaterialButton-->
+                <!--                    app:layout_constraintTop_toTopOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintEnd_toStartOf="@+id/guidelineLeft"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:fontFamily="sans-serif"-->
+                <!--                    android:textStyle="normal"-->
+                <!--                    app:backgroundTint="@color/white_dark"-->
+                <!--                    app:strokeColor="@color/border_color"-->
+                <!--                    app:rippleColor="@color/white_dark"-->
+                <!--                    android:textSize="14sp"-->
+                <!--                    android:textColor="@color/grey_tint"-->
+                <!--                    android:lineSpacingExtra="3sp"-->
+                <!--                    android:textAllCaps="false"-->
+                <!--                    android:text="Exit"/>-->
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineLeft"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.40" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/ad_call_to_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/install"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guidelineLeft"
+
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ad_choices_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ad_media" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.gms.ads.nativead.NativeAdView>

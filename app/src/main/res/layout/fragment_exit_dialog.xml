@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UI.fragments.ExitDialog">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_20sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/adCard"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <FrameLayout
+                android:id="@+id/refadslayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </FrameLayout>
+
+            <com.facebook.ads.NativeAdLayout
+                android:id="@+id/refadslayoutFb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@id/adCard">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:text="Cancel"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:id="@+id/btnNo"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:backgroundTint="@null"
+                android:background="@drawable/btn_cancel_bg"
+                android:fontFamily="@font/roboto_medium"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:text="Exit"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:backgroundTint="@null"
+                android:background="@color/pinkColor"
+                app:layout_goneMarginLeft="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_medium"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/adCard"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:gravity="center"
+                app:layout_constraintLeft_toRightOf="@id/btnNo"
+                android:id="@+id/btnYes"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

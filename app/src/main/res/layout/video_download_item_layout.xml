@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/video_download_fragment_main_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <ImageView
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:id="@+id/imgVideoMedia"
+            android:background="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@id/imgVideoMedia"
+            app:layout_constraintRight_toLeftOf="@id/btnVideoStopAndResume"
+            app:layout_constraintTop_toTopOf="@id/imgVideoMedia"
+            app:layout_constraintBottom_toBottomOf="@id/imgVideoMedia"
+            android:layout_marginHorizontal="@dimen/_12sdp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDownloadingVideoName"
+                android:text="Video Name"
+                android:singleLine="true"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/dark_gray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDownloadingVideoSize"
+                android:text="10MB"
+                android:textColor="@color/video_size_text_color"
+                android:singleLine="true"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="@dimen/_10ssp"/>
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnVideoMenu"
+            android:src="@drawable/videomenuicon"
+            android:paddingRight="@dimen/_16sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnVideoStopAndResume"
+            android:src="@drawable/videostopicon"
+            android:padding="@dimen/_4sdp"
+            app:layout_constraintRight_toLeftOf="@id/btnVideoMenu"
+            app:layout_constraintTop_toTopOf="@id/btnVideoMenu"
+            app:layout_constraintBottom_toBottomOf="@id/btnVideoMenu"
+            android:layout_marginRight="@dimen/_16sdp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

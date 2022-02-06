@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.videoplayer_and_downloader">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+
+    <application
+        android:name=".Utils.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VideoPlayer_and_downloader"
+        android:usesCleartextTraffic="true"
+        tools:ignore="MissingTvBanner">
+        <activity
+            android:name=".UI.activites.MainAudioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.activites.TrendingFavouritesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TrendingVideos.TrendingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TrendingVideos.TrendingVideoPlayer"
+            android:exported="false" />
+        <activity
+            android:name=".UI.activites.AudioPlayerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.activites.DetailsAudioActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.activites.FileManagerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.activites.AnotherActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.activites.PermissionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.activites.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.activites.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.activites.VideoPlayer"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SocialVideosDonwloader.downloderActivities.NestedScrollWebDashboardActivity"
+            android:exported="false"
+            android:label="@string/title_activity_browser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SocialVideosDonwloader.downloderActivities.VideoPlayerForWhatsapp"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SocialVideosDonwloader.downloderActivities.ShowWhatsappStatus"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SocialVideosDonwloader.downloderActivities.DownloadVideosDashboardActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="m.youtube.com" />
+                <data android:host="m.facebook.com" />
+                <data android:host="www.instagram.com" />
+                <data android:host="instagram.com" />
+                <data android:host="mobile.twitter.com" />
+                <data android:host="www.dailymotion.com" />
+                <data android:host="dailymotion.com" />
+                <data android:host="www.veoh.com" />
+                <data android:host="veoh.com" />
+                <data android:host="vimeo.com" />
+                <data android:host="m.vk.com" />
+                <data android:host="vk.com" />
+                <data android:host="m.vlive.tv" />
+                <data android:host="m.tv.naver.com" />
+                <data android:host="www.metacafe.com" />
+                <data android:host="metacafe.com" />
+                <data android:host="compaign.tudou.com" />
+                <data android:host="www.tudou.com" />
+                <data android:host="m.youku.com" />
+                <data android:host="youku.com" />
+                <data android:host="myspace.com" />
+                <data android:host="vine.co" />
+                <data android:host="www.tumblr.com" />
+                <data android:host="www.google.com" />
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".SocialVideosDonwloader.download_feature.download_utils.MyDownloadManagerClass"
+            android:exported="false" />
+        <service
+            android:name=".services.AudioPlayerService"
+            android:enabled="true" />
+
+        <receiver
+            android:name=".services.NotificationReciver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="actionplay" />
+                <action android:name="actionnext" />
+                <action android:name="actionprevious" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+    </application>
+
+</manifest>

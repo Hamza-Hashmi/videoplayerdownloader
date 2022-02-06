@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shimmer_ad_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <View
+            android:background="@color/background"
+
+        android:id="@+id/shimmer_ad_media"
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:background="@color/background"
+            android:id="@+id/shimmer_ad_app_icon"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_margin="@dimen/_2sdp"
+            app:layout_constraintStart_toEndOf="@+id/shimmer_ad_media"
+            app:layout_constraintTop_toTopOf="@+id/shimmer_ad_media" />
+
+        <View
+            android:background="@color/background"
+            android:id="@+id/shimmer_adLabel"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_margin="@dimen/_4sdp"
+            android:gravity="center"
+            android:paddingStart="@dimen/_1sdp"
+            android:paddingEnd="@dimen/_1sdp"
+            android:textColor="#1cd1a3"
+            android:textSize="@dimen/_4ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/shimmer_ad_media"
+            app:layout_constraintStart_toEndOf="@+id/shimmer_ad_media"
+            app:layout_constraintTop_toBottomOf="@+id/shimmer_ad_app_icon"
+            app:layout_constraintVertical_bias="0.95" />
+
+        <View
+            android:background="@color/background"
+            android:id="@+id/shimmer_ad_headline"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_14sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:maxLines="2"
+            android:minLines="1"
+
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/shimmer_ad_app_icon"
+            app:layout_constraintTop_toTopOf="@+id/shimmer_ad_app_icon" />
+        <View
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/background"
+            android:id="@+id/shimmer_ad_advertiser"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_14ssp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:gravity="bottom"
+            android:maxLines="1"
+            android:text=""
+            android:textSize="@dimen/_9ssp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/shimmer_ad_call_to_action"
+            app:layout_constraintEnd_toEndOf="@+id/shimmer_ad_headline"
+            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintStart_toEndOf="@+id/shimmer_ad_media"
+            app:layout_constraintTop_toBottomOf="@+id/shimmer_ad_app_icon"
+            app:layout_constraintVertical_bias="0.3" />
+        <View
+            app:layout_constraintTop_toBottomOf="@+id/shimmer_ad_advertiser"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/background"
+            android:id="@+id/shimmer_ad_call_to_action"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_goneMarginEnd="@dimen/_8sdp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/shimmer_ad_choices_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/shimmer_ad_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

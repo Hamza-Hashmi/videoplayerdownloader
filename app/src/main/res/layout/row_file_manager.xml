@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:elevation="@dimen/_2sdp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="@dimen/_7sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parent_layout"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_marginStart="@dimen/_10sdp"
+                android:id="@+id/card_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/iv_thumbnail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/thumbnail"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_file_manager"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_marginStart="@dimen/_12sdp"
+
+                android:maxLines="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:lineSpacingExtra="3sp"
+                android:text="vid_000123"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintStart_toEndOf="@id/card_image"
+                app:layout_constraintTop_toTopOf="parent"
+
+
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/download_url"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:title="Sites"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/video_in_progress"
+        android:enabled="true"
+        android:title="Link"
+        android:icon="@drawable/progress"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/video_download"
+        android:enabled="true"
+        android:title="Files"
+        android:icon="@drawable/download"
+        app:showAsAction="ifRoom"/>
+
+</menu>

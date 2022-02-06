@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.SearchVideoUrlFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        app:backgroundTint="@color/video_download_fragment_main_color"
+        android:background="@color/video_download_fragment_main_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/toolbar">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBack"
+            android:src="@drawable/ic_back_black"
+            android:padding="@dimen/_12sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/playicon"
+            app:layout_constraintLeft_toLeftOf="@id/tvPlay"
+            app:layout_constraintRight_toRightOf="@id/tvPlay"
+            app:layout_constraintTop_toTopOf="@id/tvPlay"
+            android:layout_marginBottom="@dimen/_14sdp"
+            android:layout_marginRight="@dimen/_1sdp"
+            app:layout_constraintBottom_toBottomOf="@id/tvPlay"/>
+
+        <TextView
+            android:id="@+id/tvPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="PLAY"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/primary_color"
+            app:layout_constraintBottom_toBottomOf="@id/btnBack"
+            app:layout_constraintLeft_toRightOf="@id/btnBack"
+            app:layout_constraintTop_toTopOf="@id/btnBack" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDownload"
+            android:fontFamily="@font/roboto_bold"
+            android:text="&amp; Downoload"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintLeft_toRightOf="@id/tvPlay"
+            app:layout_constraintTop_toTopOf="@id/tvPlay"
+            app:layout_constraintBottom_toBottomOf="@id/tvPlay"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/questionmark"
+            app:layout_constraintTop_toTopOf="@id/tvDownload"
+            app:layout_constraintBottom_toBottomOf="@id/tvDownload"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="@dimen/_12sdp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/edttextUrlField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/paste_link_button_bg"
+                android:ems="10"
+                android:hint="Paste a video URL here to download...."
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingTop="@dimen/_11sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_11sdp"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/btnPaste"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/paste_link_button_bg"
+                app:backgroundTint="@null"
+                android:text="@string/paste_link"
+                android:textAllCaps="false"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginRight="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/btnDownload"
+                app:layout_constraintLeft_toLeftOf="@id/edttextUrlField"
+                app:layout_constraintRight_toLeftOf="@id/guideline2"
+                app:layout_constraintTop_toTopOf="@+id/btnDownload" />
+
+            <Button
+                android:id="@+id/btnDownload"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:background="@drawable/download_now_button_bg"
+                android:text="Download"
+                android:fontFamily="@font/roboto_medium"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_12ssp"
+                app:backgroundTint="@null"
+                android:layout_marginLeft="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@id/edttextUrlField"
+                app:layout_constraintRight_toRightOf="@id/edttextUrlField"
+                app:layout_constraintLeft_toRightOf="@id/guideline2"/>
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/paste_link_button_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/_3sdp"
+                app:backgroundTint="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnPaste">
+
+                <LinearLayout
+                    android:id="@+id/topButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_8sdp"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutInstagram"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/instagram"
+                            android:text="Instagram"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutFacebook"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/facebook"
+                            android:text="Facebook"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutWhatsapp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/whatsapp"
+                            android:text="Whatsapp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutVimeo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/vimeo"
+                            android:text="Vimeo"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/midButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_8sdp"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutTwitter"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/twitter"
+                            android:text="Twitter"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutDailymotion"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/dailymotion"
+                            android:gravity="center"
+                            android:text="Dailymotion"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutFBWatch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/fb_watch"
+                            android:text="Fb Watch"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutLikee"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/likee"
+                            android:text="Likee"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/lblHowToDownload"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:text="How to Download with Url!"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="Open your social site"
+                android:drawableLeft="@drawable/dot"
+                android:drawablePadding="@dimen/_8sdp"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/roboto"
+                app:layout_constraintEnd_toEndOf="@id/linearLayout"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/lblHowToDownload" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/dot"
+                android:drawablePadding="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="Copy your video link"
+                android:fontFamily="@font/roboto"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/dot"
+                android:drawablePadding="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="Paste your social video link here."
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/roboto"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:drawableLeft="@drawable/dot"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Click Download button to download video"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.50"
+                app:layout_constraintGuide_begin="20dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

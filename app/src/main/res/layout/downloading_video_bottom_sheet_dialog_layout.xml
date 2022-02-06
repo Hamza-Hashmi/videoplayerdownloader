@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bottom_sheet_dialog_backgorund">
+<View
+    android:layout_width="@dimen/_55sdp"
+    android:layout_height="@dimen/_5sdp"
+    android:id="@+id/view1"
+    android:background="@color/gray"
+    android:layout_marginVertical="@dimen/_12sdp"
+    app:layout_constraintBottom_toTopOf="@id/cl1"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cl1"
+        android:background="@color/video_download_fragment_main_color"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintBottom_toTopOf="@id/tv_downlaod"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/view1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:id="@+id/iv_video_logo_layout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_video_logo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/iv_video_logo_layout"
+            app:layout_constraintRight_toRightOf="parent"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            app:layout_constraintTop_toTopOf="@id/iv_video_logo_layout"
+            app:layout_constraintBottom_toBottomOf="@id/iv_video_logo_layout">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:id="@+id/tv_video_platform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Video Platofrom"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/tv_video_extension"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvVideoSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2MB"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold"
+                android:textColor="#878686" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/tv_downlaod"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        app:backgroundTint="@null"
+        android:text="Download"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/downloadbottomsheet"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginVertical="@dimen/_12sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/cl1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <Button
+        android:id="@+id/tv_play"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        app:backgroundTint="@null"
+        android:text="Play Video"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/roboto_medium"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/playvideobottomsheet"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

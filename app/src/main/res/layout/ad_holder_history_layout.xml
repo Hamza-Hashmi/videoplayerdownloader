@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/adfram"
+    >
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+        <include layout="@layout/data_placeholder_history_ad_layout"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <include
+        android:visibility="gone"
+        android:id="@+id/fbNativeAdView"
+        layout="@layout/fb_native_ad_banner"/>
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/uniform"
+        layout="@layout/native_ad_history_adapter"
+        />
+
+
+</FrameLayout>

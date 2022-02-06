@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ads.NativeAdLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fb_constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_70sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.facebook.ads.MediaView
+                android:id="@+id/fb_ad_media"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_gravity="center_horizontal"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/fb_constraintLayout6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_2sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/fb_ad_media"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/fb_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <ImageView
+                        android:padding="@dimen/_2sdp"
+                        android:id="@+id/fb_ad_app_icon"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_marginBottom="@dimen/_6sdp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="image"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <TextView
+
+                    android:id="@+id/fb_ad_headline"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:lineSpacingExtra="1sp"
+                    android:text="English Voice Typing keyboard"
+                    android:textColor="#191919"
+                    android:textSize="11sp"
+                    android:maxLines="2"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/fb_ll"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/fb_ad_body"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:gravity="bottom"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:lineSpacingExtra="1sp"
+                    android:text="Type what you want freely Type what you want freely"
+                    android:textColor="#979797"
+                    android:textSize="6sp"
+                    android:maxLines="1"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/fb_ll"
+                    app:layout_constraintTop_toBottomOf="@+id/fb_ad_headline" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fb_ad_call_to_action"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_34sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:text="install Now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/fb_adLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:background="@drawable/square_border_shape"
+                    android:contentDescription="/image"
+                    android:gravity="center"
+                    android:padding="@dimen/_2sdp"
+                    android:text="Ad"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="5sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:id="@+id/fb_ad_choices_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="end"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/fb_constraintLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/fb_ad_media"
+                app:layout_constraintTop_toBottomOf="@+id/fb_constraintLayout6" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.facebook.ads.NativeAdLayout>

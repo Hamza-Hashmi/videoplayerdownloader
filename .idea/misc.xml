@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.31851851851851853" />
+        <entry key="app/src/main/res/drawable-mdpi/bottom_sheet_dialog_backgorund.xml" value="0.1905" />
+        <entry key="app/src/main/res/drawable-mdpi/cancelvideo.xml" value="0.1905" />
+        <entry key="app/src/main/res/drawable-mdpi/download_now_button_bg.xml" value="0.1905" />
+        <entry key="app/src/main/res/drawable-mdpi/edittext_backgound.xml" value="0.1905" />
+        <entry key="app/src/main/res/drawable-mdpi/edittext_cursor.xml" value="0.1905" />
+        <entry key="app/src/main/res/drawable-mdpi/ic_audio_repeat_on.xml" value="0.20677083333333332" />
+        <entry key="app/src/main/res/drawable-mdpi/ic_audio_shuffle_on.xml" value="0.20677083333333332" />
+        <entry key="app/src/main/res/drawable-mdpi/ic_youtube_not_supported.xml" value="0.1905" />
+        <entry key="app/src/main/res/drawable-mdpi/loading_page_progress_status.xml" value="0.1905" />
+        <entry key="app/src/main/res/drawable-mdpi/paste_link_button_bg.xml" value="0.1905" />
+        <entry key="app/src/main/res/drawable-v24/ic_brightness_auto_24dp.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable-v24/ic_volume_off_24dp.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ad_button_bg.xml" value="0.212" />
+        <entry key="app/src/main/res/drawable/btn_cancel_bg.xml" value="0.147" />
+        <entry key="app/src/main/res/drawable/button_selected_bg.xml" value="0.20677083333333332" />
+        <entry key="app/src/main/res/drawable/button_unselected_bg.xml" value="0.2140625" />
+        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.1905" />
+        <entry key="app/src/main/res/drawable/ic_back_black.xml" value="0.1905" />
+        <entry key="app/src/main/res/drawable/ic_play.xml" value="0.36615384615384616" />
+        <entry key="app/src/main/res/drawable/ic_thumb.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/indicator.xml" value="0.20677083333333332" />
+        <entry key="app/src/main/res/drawable/music_player_bg.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/permission_allow_button_bg.xml" value="0.2140625" />
+        <entry key="app/src/main/res/drawable/selected_tab.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/selector_tab.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/square_border_shape.xml" value="0.3638888888888889" />
+        <entry key="app/src/main/res/drawable/tab_selecter_color.xml" value="0.20677083333333332" />
+        <entry key="app/src/main/res/drawable/tab_selector.xml" value="0.20677083333333332" />
+        <entry key="app/src/main/res/drawable/un_selected_tab.xml" value="0.371875" />
+        <entry key="app/src/main/res/layout/activity_another.xml" value="0.19427083333333334" />
+        <entry key="app/src/main/res/layout/activity_audio_player.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/activity_download_videos_dashboard.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/activity_file_manager.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main_audio.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_permission.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/activity_player.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/activity_show_whatsapp_status.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/activity_trending.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/activity_trending_favourites.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_trending_video_player.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/activity_video_player_for_whatsapp.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/ad_holder_native_without_media.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/ad_loader_player.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/add_playlist_dialog.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/bottom_sheet_layout_for_trending.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/custom_exo_controller_view.xml" value="0.190625" />
+        <entry key="app/src/main/res/layout/data_placeholder__small_ad_layout.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/data_placeholder_exit_screen.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/data_placeholder_splash_ad.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/data_placeholder_without_media.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/delete_dialog.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/detailed_activity.xml" value="0.15677083333333333" />
+        <entry key="app/src/main/res/layout/downloading_video_bottom_sheet_dialog_layout.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/exo_styled_player_control_view.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/exo_styled_player_view.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/fb_exist_screen_ad_layout.xml" value="0.23624595469255663" />
+        <entry key="app/src/main/res/layout/fb_main_native_splash_ad.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fb_native_ad_banner.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/fb_native_ad_screen.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/folder_grid_row.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/folder_row.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_albums.xml" value="0.16145833333333334" />
+        <entry key="app/src/main/res/layout/fragment_all_videos.xml" value="0.190625" />
+        <entry key="app/src/main/res/layout/fragment_artist.xml" value="0.15677083333333333" />
+        <entry key="app/src/main/res/layout/fragment_downloaded_videos.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/fragment_downloads.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/fragment_exit_dialog.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_main_audio.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/fragment_main_video.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_search_video_url.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/fragment_tracks.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/fragment_trending_videos.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_video_folders_fragments.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/fragment_video_in_progress.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/layout_ad_container_list.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/layout_ad_fb_list_native.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/layout_ad_list_native.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/layout_app_open_loading.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/layout_fb_native_banner.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/layout_native_banner.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/list_native_fb_ad_layout.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/native_ad_history_adapter.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/native_ad_history_gridlayout_adapter.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/native_ad_layout.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/native_ad_layout_loader.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/native_ad_layout_splash.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/native_ad_player.xml" value="0.3067226890756303" />
+        <entry key="app/src/main/res/layout/native_ad_small.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/native_ad_splash.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/native_ad_without_media.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/native_exit_screen_ads.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/native_main_splash_ad.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/nav_header.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/layout/progress_dialog.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/rename_dialog.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/rename_video_dialog.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/row_album_artist.xml" value="0.16145833333333334" />
+        <entry key="app/src/main/res/layout/row_audio_songs.xml" value="0.19427083333333334" />
+        <entry key="app/src/main/res/layout/row_available_video_formats.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/row_file_manager.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/row_native_ad.xml" value="0.19427083333333334" />
+        <entry key="app/src/main/res/layout/row_trending_items.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/row_trending_ites.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/row_video_history.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/row_videos.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/selected_video_bottom_sheet.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/supported_video_item.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/video_download_item_layout.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/video_in_progress_item_layout.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/videoplayer_bottom_bar.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/youtube_supported_dailog.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/yt_overlay.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/yt_seconds_view.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/menu/audio_popup_menu.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/menu/dashboard_menu.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/menu/nav_menu.xml" value="0.13697916666666668" />
+        <entry key="app/src/main/res/menu/video_popup_menu.xml" value="0.19427083333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

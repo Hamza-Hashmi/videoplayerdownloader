@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="adLableBgColor">#e2e2e2</color>
+    <color name="background">#BABABA</color>
+    <color name="colorPrimary">#5b5b5b</color>
+    <color name="subTextColor">#b4b4b4</color>
+    <color name="pinkColor">#fe1743</color>
+    <color name="gray">#334F4F55</color>
+    <color name="primary_color">#ff1744</color>
+    <color name="video_download_fragment_main_color">#f8f8f8</color>
+    <color name="dark_gray">#5b5b5b</color>
+    <color name="bottom_sheet_background_color">#F8F8F8</color>
+    <color name="video_size_text_color">#b0b0b0</color>
+
+    <color name="playedColor">#d94f4a</color>
+    <color name="unplayedColor">#8a8a8a</color>
+    <color name="player_bottom_bar">#BF06070F</color>
+    <color name="light_white">#C7FFFFFF</color>
+    <color name="toolbar_bg_color">#f8f8f8</color>
+
+
+</resources>

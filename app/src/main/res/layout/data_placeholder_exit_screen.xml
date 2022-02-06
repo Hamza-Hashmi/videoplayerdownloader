@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/ad_media"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_min="@dimen/_110sdp"
+            app:layout_constraintHeight_max="@dimen/_140sdp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            android:background="@color/background"
+            android:layout_marginBottom="@dimen/_6sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ad_media"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <View
+
+                    android:id="@+id/ad_app_icon"
+                    android:layout_width="@dimen/_47sdp"
+                    android:layout_height="@dimen/_47sdp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/background"
+                    android:contentDescription="image"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:id="@+id/ad_headline"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_10sdp"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="1sp"
+                android:background="@color/background"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="Audio Sharing"
+                android:textColor="#191919"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toStartOf="@+id/adLabel"
+                app:layout_constraintStart_toStartOf="@+id/ad_body"
+                app:layout_constraintTop_toTopOf="@+id/ll" />
+            <View
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:id="@+id/ad_body"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_10sdp"
+                android:gravity="bottom"
+                android:fontFamily="@font/poppins"
+                android:textStyle="normal"
+                android:textSize="9sp"
+                android:textColor="#aaaaaa"
+                android:background="@color/background"
+                android:lineSpacingExtra="4sp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Type what you want freely"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/adLabel"
+                app:layout_constraintStart_toEndOf="@+id/ll"
+                android:layout_marginStart="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@+id/ad_headline"
+                />
+
+
+            <View
+                android:background="@color/background"
+                android:layout_marginTop="@dimen/_2sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:id="@+id/adLabel"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:contentDescription="@string/break_image"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:text="@string/ad"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_5ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/end_layout"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineLeft"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.40" />
+
+                <View
+                    app:layout_constraintStart_toEndOf="@+id/guidelineLeft"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/ad_call_to_action"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/_15sdp"
+
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@color/background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/_15sdp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ad_choices_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ad_media" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
